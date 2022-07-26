@@ -1,0 +1,37 @@
+
+.section1-container {
+    position: relative;
+    width: 400px;
+    height: 100vh;
+    padding: 0px 20px 0 20px;
+}
+
+
+
+
+/* SECTION2, DESMOND START  HERE, INCLUDE SECTION2 IN ALL OF YOUR CLASSES NAME -->
+start here */
+
+
+.section2-holder {
+    margin-top: 40px;
+}
+
+.section2-msg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section2-msgtxt {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin: 10px 0;
+}
+
+.section2-selectptrn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
