@@ -1,9 +1,74 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --b-color: #000000;
+    --w-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--w-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+}
 
 .section1-container {
     position: relative;
     width: 400px;
     height: 100vh;
     padding: 0px 20px 0 20px;
+}
+
+.section1-logo {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section1-header {
+font-family: 'Quicksand';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+margin-top: 40px;
+text-align: center;
+}
+
+.section1-fromto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+h5 {
+    font-family: 'Quicksand';
+    Font-style: Medium;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--b-color);
+}
+
+.name {
+    font-family: 'Quicksand';
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: var(--b-color);
 }
 
 
