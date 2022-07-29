@@ -23,7 +23,7 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
-.section1-container {
+.section1-container, .section2-container {
     position: relative;
     width: 400px;
     height: 100vh;
@@ -126,3 +126,57 @@ start here */
     color: #fff;
     
 }
+.textbox {
+    min-height: 150px;
+    padding: 5px;
+    margin-bottom: 25px;
+    width: 300px;
+    font-size: 13px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .goback {
+    padding: 15px;
+    background: white;
+    color: rgb(11, 121, 121);
+    border: none;
+    font-size: inherit;
+  }
+  
+  .send {
+    padding: 15px;
+    font-size: inherit;
+    color: white;
+    border-radius: 5px;
+    border: 0px;
+    background-color: rgb(255, 115, 0);
+  }
+  /* ENDS HERE */
+  
+  /* Josephe44 Contribution */
+  .stat-head {
+    text-align: center;
+  }
+  
+  .stat-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .stat-word {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Josephe44 Contribution Ends Here */
