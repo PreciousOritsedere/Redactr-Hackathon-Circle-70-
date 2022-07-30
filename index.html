@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Redact App</title>
-  </head>
-  <body>
-    <div class="section1-container">
-        <!-- Paul's code -->
-      <div class="section1">
 
-            <!-- LOGO SECTION -->
-            <div class="section1-logo">
-                <img src="img/Hide.svg" alt="">
-                <img src="img/logo.svg" alt="">
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Redact App</title>
+</head>
 
-            <h2 class="section1-header">CHAT</h2>
+<body>
+  <div class="section1-container">
+    <!-- Paul's code -->
+    <div class="section1">
 
-            <div class="section1-fromto">
-                <div class="person1">
-                    <h5>FROM:</h5>
-                    <p class="name">John</p>
-                </div>
-                <div class="person2">
-                     <h5>TO:</h5>
-                    <p class="name">James</p>
-                </div>
-            </div>
+      <!-- LOGO SECTION -->
+      <div class="section1-logo">
+        <img src="img/Hide.svg" alt="">
+        <img src="img/logo.svg" alt="">
+      </div>
+
+      <h2 class="section1-header">CHAT</h2>
+
+      <div class="section1-fromto">
+        <div class="person1">
+          <h5>FROM:</h5>
+          <p class="name">John</p>
         </div>
-
-
-          <!--desmond's code  -->
-      <div class="section2-holder">
-        <div class="section2-msg labels">
-          <label for="message">Message</label>
-          <p>word count:<span>25</span></p>
+        <div class="person2">
+          <h5>TO:</h5>
+          <p class="name">James</p>
         </div>
-        <textarea name="message" id="" class="section2-msgtxt"></textarea>
-        <div class="section2-selectptrn">
-          <label for="select a pattern">Select a pattern</label>
+      </div>
+    </div>
+
+
+    <!--desmond's code  -->
+
+    <div class="section2-holder">
+      <div class="section2-msglabels">
+        <label for="message">Message</label>
+        <p>word count:<span>25</span></p>
+      </div>
+      <textarea name="message" id="" class="section2-msgtxt"></textarea>
+      
+    </div>
+    <!-- blessing's code -->
+    <div class="section3">
+      <div class="bottomBar">
+        <div class="section2-selectptrn" >
+          <label for="select a pattern" class="msg">Select a pattern</label>
           <select name="select a pattern" id="">
             <option value=""></option>
             <option value=""></option>
           </select>
         </div>
-      </div>
-      <!-- blessing's code -->
-      <div class="section3">
         <div class="labels">
-            <label for="redact-words">Redact words</label>
-            <p>word count: <span>6</span></p>
+          <label for="redact-words" class="msg">Redact words</label>
+          <p>word count: <span>6</span></p>
         </div>
-        
-        <textarea id="redacted-words"></textarea>
-        <button class="redactnow-btn">Redact Now</button>
+
+      </div>
+
+      <textarea id="redacted-words"></textarea>
+      <!-- <button class="refresh">Refresh</button> -->
+      <button class="redactnow-btn">Redact Now</button>
     </div>
-    </div>
-  </body>
+  </div>
+
+</body>
+
 </html>

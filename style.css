@@ -1,182 +1,215 @@
 /* Global */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Quicksand:wght@400;500;600;700&display=swap");
 
-
-:root{
-    --b-color: #000000;
-    --w-color: #ffffff;
+:root {
+  --b-color: #000000;
+  --w-color: #ffffff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: var(--w-color);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Quicksand', sans-serif;
+body {
+  background: var(--w-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Quicksand", sans-serif;
 }
 
-.section1-container, .section2-container {
-    position: relative;
-    width: 400px;
-    height: 100vh;
-    padding: 0px 20px 0 20px;
+.section1-container,
+.section2-container {
+  position: relative;
+  width: 400px;
+  height: 100vh;
+  padding: 0px 20px 0 20px;
 }
 
 .section1-logo {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .section1-header {
-font-family: 'Quicksand';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 38px;
-margin-top: 40px;
-text-align: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .section1-fromto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 h5 {
-    font-family: 'Quicksand';
-    Font-style: Medium;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: var(--b-color);
+  font-family: "Quicksand";
+  font-style: Medium;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--b-color);
 }
 
 .name {
-    font-family: 'Quicksand';
-    font-style: Regular;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.02em;
-    color: var(--b-color);
+  font-family: "Quicksand";
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: var(--b-color);
 }
-
-
-
 
 /* SECTION2, DESMOND START  HERE, INCLUDE SECTION2 IN ALL OF YOUR CLASSES NAME -->
 start here */
 
-
 .section2-holder {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .section2-msg {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section2-msglabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: black;
+}
+
+.section2-msglabels p {
+  font-size: 15px;
+  color: #3030f5;
 }
 
 .section2-msgtxt {
-    width: 100%;
-    height: 100px;
-    resize: none;
-    margin: 10px 0;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  margin: 10px 0;
 }
 
 .section2-selectptrn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .section3 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .labels {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .labels p {
-    color: #005C65;
+  color: #005c65;
 }
 #redacted-words {
-    resize: none;
-    width: 100%;
+  resize: none;
+  width: 100%;
 }
 .redactnow-btn {
-    display: block;
-    width: 200px;
-    background-color: #FF8C40;
-    border: none;
-    padding: 15px 30px;
-    margin: 50px auto;
-    border-radius: 10px;
-    color: #fff;
-    
+  display: block;
+  width: 200px;
+  background-color: #ff8c40;
+  border: none;
+  padding: 15px 30px;
+  margin: 50px auto;
+  border-radius: 10px;
+  color: #fff;
 }
 .textbox {
-    min-height: 150px;
-    padding: 5px;
-    margin-bottom: 25px;
-    width: 300px;
-    font-size: 13px;
+  min-height: 150px;
+  padding: 5px;
+  margin-bottom: 25px;
+  width: 300px;
+  font-size: 13px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.goback {
+  padding: 15px;
+  background: white;
+  color: rgb(11, 121, 121);
+  border: none;
+  font-size: inherit;
+}
+
+.send {
+  padding: 15px;
+  font-size: inherit;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+  background-color: rgb(255, 115, 0);
+}
+/* ENDS HERE */
+
+/* Josephe44 Contribution */
+.stat-head {
+  text-align: center;
+}
+
+.stat-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stat-word {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Josephe44 Contribution Ends Here */
+
+/* Precious code starts here */
+@media (min-width: 764px) {
+  .section1-container {
+    width: 650px;
+    height: 750px;
     border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 20px;
   }
-  
-  .button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
+  .section2-msgtxt {
+    height: 150px;
+    border: 1px solid #3f3f3f;
+    border-radius: 15px;
   }
-  
-  .goback {
-    padding: 15px;
-    background: white;
-    color: rgb(11, 121, 121);
-    border: none;
-    font-size: inherit;
-  }
-  
-  .send {
-    padding: 15px;
-    font-size: inherit;
-    color: white;
-    border-radius: 5px;
-    border: 0px;
-    background-color: rgb(255, 115, 0);
-  }
-  /* ENDS HERE */
-  
-  /* Josephe44 Contribution */
-  .stat-head {
-    text-align: center;
-  }
-  
-  .stat-container {
+
+  .bottomBar {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 12px;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    gap: 30px;
   }
-  
-  .stat-word {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .msg {
+    margin-bottom: 10px;
   }
-  
-  /* Josephe44 Contribution Ends Here */
+}
+/* Precious ends here */
