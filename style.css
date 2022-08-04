@@ -12,26 +12,55 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display:block;
+}
+
 body {
   background: var(--w-color);
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: "Quicksand", sans-serif;
+}
+
+input, select, textarea {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 16px;
+  background: none;
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline-color: #005c65;
+}
+
+select {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.desktop-wrapper {
+  width: 100%;
+  max-width: 628px;
+  margin: 0 auto;
 }
 
 .section1-container,
 .section2-container {
-  position: relative;
-  width: 400px;
-  height: 100vh;
   padding: 0px 20px 0 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .section1-logo {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
 }
@@ -42,7 +71,7 @@ body {
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  margin-top: 40px;
+  margin-top: 28px;
   text-align: center;
 }
 
@@ -50,7 +79,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 32px;
+}
+
+.person1, .person2 {
+  display: grid;
+  gap: 4px;
 }
 
 h5 {
@@ -60,6 +94,17 @@ h5 {
   font-size: 20px;
   line-height: 24px;
   color: var(--b-color);
+}
+
+.input-section {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.cols {
+  display: grid;
+  gap: 16px;
 }
 
 .name {
@@ -74,8 +119,9 @@ h5 {
 /* SECTION2, DESMOND START  HERE, INCLUDE SECTION2 IN ALL OF YOUR CLASSES NAME -->
 start here */
 
-.section2-holder {
-  margin-top: 40px;
+.section2-holder, .section3-holder {
+  display: grid;
+  gap: 8px;
 }
 
 .section2-msg {
@@ -87,21 +133,16 @@ start here */
 .section2-msglabels {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  align-items: end;
+  font-size: 16px;
   color: black;
 }
 
 .section2-msglabels p {
-  font-size: 15px;
-  color: #3030f5;
+  font-size: 12px;
+  color: #005c65;
 }
 
-.section2-msgtxt {
-  width: 100%;
-  height: 100px;
-  resize: none;
-  margin: 10px 0;
-}
 
 .section2-selectptrn {
   display: flex;
@@ -109,30 +150,56 @@ start here */
   justify-content: space-between;
 }
 
-.section3 {
-  margin-top: 20px;
-}
 .labels {
   display: flex;
   justify-content: space-between;
 }
+
 .labels p {
   color: #005c65;
 }
-#redacted-words {
-  resize: none;
-  width: 100%;
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
+
+.action2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  /* gap: 106px; */
+}
+
+.refresh {
+  display: none;
+}
+
 .redactnow-btn {
-  display: block;
-  width: 200px;
   background-color: #ff8c40;
   border: none;
-  padding: 15px 30px;
-  margin: 50px auto;
-  border-radius: 10px;
+  padding: 20px 52px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
   color: #fff;
+  font-weight: 600;
+  transition: background 600ms;
+  cursor: pointer;
 }
+
+.send-btn {
+  padding: 16px 48px;
+}
+
+.redactnow-btn:hover, .redactnow-btn:focus {
+  background: #fff;
+  color: #ff8c40;
+}
+
 .textbox {
   min-height: 150px;
   padding: 5px;
@@ -143,41 +210,26 @@ start here */
   border-radius: 8px;
 }
 
-.button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.goback {
-  padding: 15px;
-  background: white;
-  color: rgb(11, 121, 121);
-  border: none;
-  font-size: inherit;
-}
-
-.send {
-  padding: 15px;
-  font-size: inherit;
-  color: white;
-  border-radius: 5px;
-  border: 0px;
-  background-color: rgb(255, 115, 0);
+.back {
+  display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
 }
 /* ENDS HERE */
 
 /* Josephe44 Contribution */
 .stat-head {
   text-align: center;
+  margin-top: 40px;
 }
 
 .stat-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 24px;
 }
 
 .stat-word {
@@ -189,27 +241,55 @@ start here */
 /* Josephe44 Contribution Ends Here */
 
 /* Precious code starts here */
-@media (min-width: 764px) {
-  .section1-container {
-    width: 650px;
-    height: 750px;
+@media (min-width: 800px) {
+
+  .desktop-wrapper {
     border: 1px solid black;
-    border-radius: 20px;
-  }
-  .section2-msgtxt {
-    height: 150px;
-    border: 1px solid #3f3f3f;
-    border-radius: 15px;
+    padding: 40px 20px;
+    border-radius: 16px;
+    margin-top: 20px;
   }
 
-  .bottomBar {
+  .section1-fromto {
+    margin: 0;
+  }
+
+  .cols {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .input-section {
+    gap: 24px;
+  }
+
+  .refresh {
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
-    gap: 30px;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    align-items: center;
   }
 
-  .msg {
-    margin-bottom: 10px;
+  .refresh:hover {
+    /* transform: scale(1.01); */
+    cursor: pointer;
   }
+
+  .actions{
+    gap: 106px;
+  }
+
+  .action2 {
+    justify-content: center;
+    gap: 106px;
+  }
+
+  .stat-word {
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
 }
 /* Precious ends here */

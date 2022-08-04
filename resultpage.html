@@ -5,46 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- DavidEBUN's contribution -->
     <div class="section2-container">
-      <div>
-        <textarea class="textbox" name="" id=""></textarea>
+      <div class="section1-logo">
+        <img src="img/Hide.svg" alt="" />
+        <img src="img/logo.svg" alt="" />
       </div>
-      <div class="button">
-        <button class="goback">
-          <span><i class="fa-solid fa-arrow-left-long"></i></span>
-          Go Back
-        </button>
-        <input class="send" type="button" value="Send Message" />
-      </div>
-      <!-- ENDS HERE -->
 
-      <!-- Josephe44 Contribution -->
-      <div>
-        <h3 class="stat-head">Stats</h3>
-        <section class="stat-container">
-          <div class="stat-word">
-            <p>Total message words</p>
-            <p>25</p>
-          </div>
-          <div class="stat-word">
-            <p>Total redacted words</p>
-            <p>6</p>
-          </div>
-          <div class="stat-word">
-            <p>Total word matched</p>
-            <p>6</p>
-          </div>
+      <h2 class="section1-header">SEND</h2>
+
+      <section class="desktop-wrapper">
+        <textarea id="redacted-words" rows="8"></textarea>
+
+        <section class="action2">
+          <p class="back">
+            <img src="./img/Arrow - Left.svg" alt="" />
+            <span>Go Back</span>
+          </p>
+          <button class="redactnow-btn send-btn">Send Message</button>
         </section>
-      </div>
-      <!-- Josephe44 Contribution Ends Here -->
+        <div>
+          <h3 class="stat-head">Stats</h3>
+          <section class="stat-container">
+            <div class="stat-word">
+              <p>Total message words</p>
+              <p>25</p>
+            </div>
+            <div class="stat-word">
+              <p>Total redacted words</p>
+              <p>6</p>
+            </div>
+            <div class="stat-word">
+              <p>Total word matched</p>
+              <p>6</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- ENDS HERE -->
     </div>
   </body>
 </html>
