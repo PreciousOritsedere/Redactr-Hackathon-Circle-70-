@@ -22,12 +22,15 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.section1-container,
-.section2-container {
+.section1-container {
   position: relative;
   width: 400px;
   height: 100vh;
   padding: 0px 20px 0 20px;
+}
+.resultpage-container{
+  display: flex;
+  flex-direction: column;
 }
 
 .section1-logo {
