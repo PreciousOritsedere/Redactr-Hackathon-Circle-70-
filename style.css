@@ -14,7 +14,7 @@
 
 img {
   max-width: 100%;
-  display:block;
+  display: block;
 }
 
 body {
@@ -24,7 +24,9 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   border: 1px solid black;
   border-radius: 8px;
   width: 100%;
@@ -35,7 +37,9 @@ input, select, textarea {
   resize: none;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline-color: #005c65;
 }
 
@@ -82,7 +86,8 @@ select {
   margin-top: 32px;
 }
 
-.person1, .person2 {
+.person1,
+.person2 {
   display: grid;
   gap: 4px;
 }
@@ -119,7 +124,8 @@ h5 {
 /* SECTION2, DESMOND START  HERE, INCLUDE SECTION2 IN ALL OF YOUR CLASSES NAME -->
 start here */
 
-.section2-holder, .section3-holder {
+.section2-holder,
+.section3-holder {
   display: grid;
   gap: 8px;
 }
@@ -142,7 +148,6 @@ start here */
   font-size: 12px;
   color: #005c65;
 }
-
 
 .section2-selectptrn {
   display: flex;
@@ -195,7 +200,7 @@ start here */
   padding: 16px 48px;
 }
 
-.redactnow-btn:hover, .redactnow-btn:focus {
+.redactnow-btn:hover {
   background: #fff;
   color: #ff8c40;
 }
@@ -212,10 +217,10 @@ start here */
 
 .back {
   display: grid;
-    grid-template-columns: auto auto;
-    gap: 8px;
-    align-items: center;
-    cursor: pointer;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
 }
 /* ENDS HERE */
 
@@ -240,9 +245,30 @@ start here */
 
 /* Josephe44 Contribution Ends Here */
 
+/* style pattern error */
+#pattern-error {
+  color: red;
+  font-weight: 500;
+}
+
+/* style for send message */
+/* modal ui */
+.sendContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: none;
+  place-items: center;
+  color: #fff;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+
 /* Precious code starts here */
 @media (min-width: 800px) {
-
   .desktop-wrapper {
     border: 1px solid black;
     padding: 40px 20px;
@@ -275,7 +301,7 @@ start here */
     cursor: pointer;
   }
 
-  .actions{
+  .actions {
     gap: 106px;
   }
 
@@ -288,8 +314,6 @@ start here */
     width: 380px;
     margin-left: auto;
     margin-right: auto;
-
   }
-
 }
 /* Precious ends here */
