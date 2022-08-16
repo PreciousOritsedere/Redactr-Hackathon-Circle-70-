@@ -6,13 +6,6 @@ const redactCount = document.getElementById("redact-count");
 const refresh = document.getElementById("refresh");
 const redactnowBtn = document.getElementById("redactnow-btn");
 const patternError = document.getElementById("pattern-error");
-const redactedResult = document.getElementById("redacted-result");
-const messageWordNumber = document.getElementById("messageWordNumber");
-const redactedWordNumber = document.getElementById("redactedWordNumber");
-const sendbackBtn = document.getElementById("sendback-btn");
-const matchWord = document.getElementById("matchword");
-const sendBtn = document.getElementById("send-btn");
-const sendContainer = document.getElementById("sendContainer");
 
 // new result array
 let newResult = [];
@@ -20,8 +13,6 @@ let newResult = [];
 // Event for refreshing the form inputs
 refresh?.addEventListener("click", refreshFun);
 redactnowBtn?.addEventListener("click", redactWordFunc);
-sendbackBtn?.addEventListener("click", sendBackFunc);
-sendBtn?.addEventListener("click", sendBtnFunc);
 
 // redact logic
 function redactWordFunc(e) {
@@ -110,71 +101,8 @@ function redactFunc(data, redactedWordsData, patternsData) {
   // store the data in localstorage
   localStorage.setItem("redactResult", newData);
   // re-route to the next page
-  window.location.assign("/resultpage.html");
+  window.location.assign("resultpage.html");
 }
-
-// Logic for the resultPage
-if (window.location.pathname === "/resultpage.html") {
-  function getData() {
-    const getItemData = localStorage.getItem("redactResult");
-    const getMessageWordNumber = localStorage.getItem("messageCount");
-    const getredactedWordNumber = localStorage.getItem("redactedCount");
-    redactedResult.value = getItemData;
-    messageWordNumber.innerText = getMessageWordNumber;
-    redactedWordNumber.innerText = getredactedWordNumber;
-
-    const patternsDataFromLocalStorage = localStorage.getItem("patternsData");
-
-    const matchwordData = getItemData.split(" ");
-    let matchwordarray = [];
-    matchwordData.filter((word) => {
-      if (word === patternsDataFromLocalStorage) {
-        matchwordarray.push(word);
-      }
-    });
-    const matchwordarrayLength = matchwordarray.length;
-    matchWord.innerText = matchwordarrayLength;
-  }
-  getData();
-}
-
-// send back to Home Page
-function sendBackFunc() {
-  window.location.assign("/index.html");
-}
-
-// send message function
-function sendBtnFunc() {
-  sendContainer.style.display = "grid";
-  // take the modal out after 2sec
-  setTimeout(() => {
-    sendContainer.style.display = "none";
-  }, 2000);
-}
-sendBtnFunc;
-
-// Fetch messageValue and redactedValue
-function fetchMessageValueAndRedactedValue() {
-  const getMessageValue = localStorage.getItem("messageWordData");
-  const getRedactedValue = localStorage.getItem("redactedWordsData");
-
-  message.value = getMessageValue;
-  redactedWords.value = getRedactedValue;
-}
-fetchMessageValueAndRedactedValue();
-
-// fetch messageCount and redactedCount from localStorage
-function fetchMessageCountAndRedactedCount() {
-  //   inserting the word count into the HTML
-  const getMessageCountFromLocalStorage = localStorage.getItem("messageCount");
-  wordCount.innerText = getMessageCountFromLocalStorage;
-
-  //   inserting the redactedCount count into the HTML
-  const getredactedCountFromLocalStorage =
-    localStorage.getItem("redactedCount");
-  redactCount.innerText = getredactedCountFromLocalStorage;
-}
-fetchMessageCountAndRedactedCount();
 
 // validate patterns
 function patternsValidation(patternsData) {
@@ -183,6 +111,18 @@ function patternsValidation(patternsData) {
     return;
   }
 }
+
+function displayAllDataForMessageCountRedactWord() {
+  messageWordDataValue = localStorage.getItem("messageWordData");
+  redactedWordsDataValue = localStorage.getItem("redactedWordsData");
+  messageCountValue = localStorage.getItem("messageCount");
+  redactedCountValue = localStorage.getItem("redactedCount");
+  message.value = messageWordDataValue;
+  redactedWords.value = redactedWordsDataValue;
+  wordCount.innerText = messageCountValue;
+  redactCount.innerText = redactedCountValue;
+}
+displayAllDataForMessageCountRedactWord();
 
 // Refresh the Form inputs
 function refreshFun(e) {
