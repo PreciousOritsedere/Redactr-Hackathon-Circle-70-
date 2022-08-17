@@ -49,6 +49,9 @@ function redactWordFunc(e) {
 
   /** Action took place here **/
   messageData.map((data) => {
+    if (data === "" || redactedWordsData === "") {
+      return;
+    }
     redactFunc(data, redactedWordsData, patternsData);
   });
 
@@ -100,8 +103,15 @@ function redactFunc(data, redactedWordsData, patternsData) {
 
   // store the data in localstorage
   localStorage.setItem("redactResult", newData);
+
+  // Loading Spinner
+  loaderFunc();
   // re-route to the next page
   window.location.assign("resultpage.html");
+}
+
+function loaderFunc() {
+  redactnowBtn.innerHTML = "<div class=loader></div>";
 }
 
 // validate patterns
@@ -140,28 +150,5 @@ function refreshFun(e) {
 }
 
 
-// Hamvurger control
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-list");
-const links = document.querySelectorAll(".nav__items");
-hamburger.addEventListener('click', ()=>{
-    //Animate Link
-navLinks.classList.toggle("open");
-navLinks.style.display='flex'
-links.forEach( link => {
-link.classList.toggle("fade");
-link.addEventListener('click' , () => {
-    navLinks.style.display='none';
-});
-});
-// Hamburger Animation
-hamburger.classList.toggle("toggle");
-});
 
-// this is my own function to test the loader
-// redactnowBtn.onclick = function () {
-//   this.innerHTML = "<div class=loader></div>"
-// }
 
-const date = new Date();
-document.getElementById('year').innerHTML = date.getFullYear();
