@@ -50,6 +50,7 @@ body {
   flex-direction: column;
   gap: 48px;
   min-height: 100%;
+  overflow-y: hidden;
 }
 
 input,
@@ -224,12 +225,6 @@ select {
   width: 100%;
   margin: 0 auto;
 }
-/*
-.section1-logo {
-  padding-top: 36px;
-  display: flex;
-  align-items: center;
-} */
 
 .section1-header {
   font-style: normal;
@@ -238,6 +233,10 @@ select {
   line-height: 38px;
   margin-top: 36px;
   text-align: center;
+}
+
+.my-2 {
+  margin-bottom: 24px;
 }
 
 .section1-fromto {
@@ -328,6 +327,7 @@ start here */
   justify-content: center;
   align-items: center;
   margin-top: 48px;
+  justify-content: space-between;
 }
 
 .action2 {
@@ -338,16 +338,27 @@ start here */
   /* gap: 106px; */
 }
 
-.refresh {
+/* .refresh {
   display: none;
+} */
+
+.refresh {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.refresh:hover {
+  /* transform: scale(1.01); */
+  cursor: pointer;
 }
 
 
 .redactnow-btn {
   background-color: #ff8c40;
   border: none;
-  width: 200px;
-  height: 64px;
+  padding: 20px 40px;
   text-align: center;
   font-size: 18px;
   border-radius: 8px;
@@ -356,12 +367,13 @@ start here */
   transition: background 600ms;
   cursor: pointer;
   display: grid;
+  font-family: inherit;
   place-content: center;
 }
 
-.redactnow-btn2 {
+/* .redactnow-btn2 {
   width: 228px;
-}
+} */
 
 .loader {
   pointer-events: none;
@@ -556,23 +568,7 @@ start here */
     gap: 24px;
   }
 
-  .refresh {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .refresh:hover {
-    /* transform: scale(1.01); */
-    cursor: pointer;
-  }
-
-  .actions {
-    gap: 106px;
-  }
-
-  .action2 {
+  .action2, .actions {
     justify-content: center;
     gap: 106px;
   }
