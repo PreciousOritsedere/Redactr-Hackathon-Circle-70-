@@ -10,53 +10,69 @@
   <body>
     <!-- DavidEBUN's contribution -->
     <div class="section2-container">
-      <div class="section1-logo">
-        <img src="img/Hide.svg" alt="" />
-        <img src="img/logo.svg" alt="" />
-      </div>
-
-      <h2 class="section1-header">SEND</h2>
-
-      <section class="desktop-wrapper">
-        <textarea id="redacted-result" rows="8"></textarea>
-
-        <section class="action2">
-          <p class="back" id="sendback-btn">
-            <img src="./img/Arrow - Left.svg" alt="" />
-            <span>Go Back</span>
-          </p>
-          <button id="send-btn" class="redactnow-btn send-btn">
-            Send Message
-          </button>
-        </section>
-        <div>
-          <h3 class="stat-head">Stats</h3>
-          <section class="stat-container">
-            <div class="stat-word">
-              <p>Total message words</p>
-              <p id="messageWordNumber">25</p>
-            </div>
-            <div class="stat-word">
-              <p>Total redacted words</p>
-              <p id="redactedWordNumber">6</p>
-            </div>
-            <div class="stat-word">
-              <p>Total word matched</p>
-              <p id="matchword">6</p>
-            </div>
-          </section>
+      <section class="header grid">
+        <div class="logo">
+          <img src="img/Hide.svg" alt="" />
+          <img src="img/logo.svg" alt="" />
         </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav__items main-nav">
+            <a href="" class="nav__link">About</a>
+          </li>
+          <li class="nav__items"><a href="" class="nav__link">Team</a></li>
+        </ul>
       </section>
+
+      <main class="main">
+        <h2 class="section1-header">SEND</h2>
+        <section class="desktop-wrapper">
+          <textarea id="redacted-result" rows="8"></textarea>
+          <section class="action2">
+            <p class="back" id="sendback-btn">
+              <img src="./img/Arrow - Left.svg" alt="" />
+              <span>Go Back</span>
+            </p>
+            <button id="send-btn" class="redactnow-btn redactnow-btn2 send-btn">
+              Send Message
+            </button>
+          </section>
+          <div>
+            <h3 class="stat-head">Stats</h3>
+            <section class="stat-container">
+              <div class="stat-word">
+                <p>Total message words</p>
+                <p id="messageWordNumber">25</p>
+              </div>
+              <div class="stat-word">
+                <p>Total redacted words</p>
+                <p id="redactedWordNumber">6</p>
+              </div>
+              <div class="stat-word">
+                <p>Total word matched</p>
+                <p id="matchword">6</p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
       <!-- ENDS HERE -->
     </div>
     <div id="sendContainer" class="sendContainer">
       <div class="popup">
-        <img src="img/done.svg" alt="tick-box">
+        <img src="img/done.svg" alt="tick-box" />
         <h2>Message Sent!</h2>
-        
       </div>
-      
     </div>
+    <footer class="footer">
+      <p class="copyright">
+        &copy;<span id="year">2020</span>, All rights reserved. Designed and
+        built by AltSchool Africa circle-70
+      </p>
+    </footer>
     <!-- <script>
       const redactedResult = document.getElementById("redacted-result");
       redactedResult.value = "Hello word";

@@ -11,15 +11,26 @@
   <body>
     <div class="section1-container">
       <!-- Paul's code -->
-      <div class="section1">
-        <!-- LOGO SECTION -->
-        <div class="section1-logo">
+      <!-- LOGO SECTION -->
+      <section class="header grid">
+        <div class="logo">
           <img src="img/Hide.svg" alt="" />
           <img src="img/logo.svg" alt="" />
         </div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="nav__items main-nav">
+            <a href="" class="nav__link">About</a>
+          </li>
+          <li class="nav__items"><a href="" class="nav__link">Team</a></li>
+        </ul>
+      </section>
 
+      <main class="main">
         <h2 class="section1-header">CHAT</h2>
-
         <section class="desktop-wrapper">
           <div class="section1-fromto">
             <div class="person1">
@@ -31,51 +42,60 @@
               <p class="name">James</p>
             </div>
           </div>
-
           <!--desmond's code  -->
-
           <section class="input-section">
-          <div class="section2-holder">
-            <div class="section2-msglabels">
-              <label for="message">Message</label>
-              <p>word count: <span id="word-count"> 0 </span></p>
-            </div>
-            <textarea
-              name="message"
-              id="message"
-              class="section2-msgtxt"
-              rows="8"
-            ></textarea>
-          </div>
-          <!-- blessing's code -->
-          <div class="cols">
-            <div class="section2-selectptrn">
-              <select name="select a pattern" id="patterns">
-                <option value="none">Select a pattern</option>
-                <option value="??????">Question mark: ???</option>
-                <option value="******">Asterik: ****</option>
-              </select>
-              <p id="pattern-error"></p>
-            </div>
-            <div class="section3-holder">
+            <div class="section2-holder">
               <div class="section2-msglabels">
-                <label for="redact-words" class="msg">Redact words</label>
-                <p>word count: <span id="redact-count"> 0 </span></p>
+                <label for="message">Message</label>
+                <p>word count: <span id="word-count"> 0 </span></p>
               </div>
-              <textarea name="redacted-words" id="redacted-words" rows="3"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                class="section2-msgtxt"
+                rows="8"
+              ></textarea>
             </div>
-          </div>
+            <!-- blessing's code -->
+            <div class="cols">
+              <div class="section2-selectptrn">
+                <select name="select a pattern" id="patterns">
+                  <option value="none">Select a pattern</option>
+                  <option value="??????">Question mark: ???</option>
+                  <option value="******">Asterik: ****</option>
+                </select>
+                <p id="pattern-error"></p>
+              </div>
+              <div class="section3-holder">
+                <div class="section2-msglabels">
+                  <label for="redact-words" class="msg">Redact words</label>
+                  <p>word count: <span id="redact-count"> 0 </span></p>
+                </div>
+                <textarea
+                  name="redacted-words"
+                  id="redacted-words"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
           </section>
           <!-- <button class="refresh">Refresh</button> -->
           <section class="actions">
             <p class="refresh" id="refresh">
-              <img src="./img/ArrowsCounterClockwise.svg" alt="">
+              <img src="./img/ArrowsCounterClockwise.svg" alt="" />
               <span>Refresh</span>
             </p>
             <button id="redactnow-btn" class="redactnow-btn">Redact Now</button>
           </section>
         </section>
+      </main>
     </div>
+    <footer class="footer">
+      <p class="copyright">
+        &copy;<span id="year">2020</span>, All rights reserved. Designed and
+        built by AltSchool Africa circle-70
+      </p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
