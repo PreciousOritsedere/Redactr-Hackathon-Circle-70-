@@ -417,7 +417,8 @@ start here */
 
 .back {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto __member7">
+   <div class="image">auto;
   gap: 8px;
   align-items: center;
   cursor: pointer;
@@ -485,7 +486,7 @@ start here */
 .main-info {
   padding: 0 20px;
   padding-top: 36px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 .head {
@@ -493,7 +494,7 @@ start here */
 }
 
 .content {
-  padding-top: 24px;
+  padding-top: 28px;
 }
 
 .image {
@@ -504,6 +505,52 @@ start here */
   /* border: 1px solid black; */
   text-align: center;
   /* background-color: #FFE6E6; */
+}
+
+.team-list {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.special_accent {
+  color: #85586F;
+}
+
+.twitter {
+  color: #1DA1F2;
+}
+
+.linkedin {
+   color: #0077b5;
+}
+
+.github {
+  color: #bd2c00;
+}
+
+.team__member {
+  display: grid;
+  gap: 4px;
+}
+
+.member__info {
+  display: grid;
+  gap: 4px;
+}
+
+.short-words {
+  display: grid;
+  gap: 12px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.header-accent {
+  color: #842600;
 }
 
 /* Precious code starts here */
@@ -609,6 +656,21 @@ start here */
   }
   .sendContainer {
     width: 410px;
+  }
+
+  .team__member {
+    grid-template-columns: auto 1fr;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .team-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .content {
+    padding-top: 40px;
   }
 }
 /* Precious ends here */
