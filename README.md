@@ -8,7 +8,7 @@ Live demo [_here_](https://redactrapp.netlify.app/index.html).
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Instructions](#instruction)
+* [Instructions](#instructions)
 * [Acknowledgements](#acknowledgements)
 <!-- * [License](#license) -->
 
@@ -32,8 +32,9 @@ Live demo [_here_](https://redactrapp.netlify.app/index.html).
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+<img width="324" alt="redactr" src="https://user-images.githubusercontent.com/68845318/185506304-0de321f9-1a8a-437a-8fc7-a1b217dadc27.png">
+
+<img width="324" alt="redactr2" src="https://user-images.githubusercontent.com/68845318/185506343-06142b35-128b-4c57-b3cd-9211f7080f4c.png">
 
 
 ## Instructions
