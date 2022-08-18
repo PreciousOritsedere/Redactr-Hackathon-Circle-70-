@@ -149,6 +149,7 @@ function refreshFun(e) {
   localStorage.removeItem("redactResult");
   window.location.reload();
 }
+//Precious DAVIES WORKED ON IT
 function proceedBtnFunc(e) {
   e.preventDefault();
   instrModal.style.display = "none";
