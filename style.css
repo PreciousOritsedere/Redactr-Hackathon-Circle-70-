@@ -86,9 +86,13 @@ select {
   padding: 0 20px;
 }
 
+.main-index {
+  padding-bottom: 20px;
+}
+
 .header {
   position: relative;
-  padding-top: 24px;
+  padding-top: 20px;
   z-index: 3;
 }
 
@@ -156,7 +160,7 @@ select {
     cursor: pointer;
     right: 3%;
     top: 69%;
-    height: 14px;
+    height: 16px;
     transform: translate(-25%, -50%);
     z-index: 5;
   }
@@ -208,7 +212,7 @@ select {
   }
 
   .toggle .line3 {
-    transform: rotate(45deg) translate(2px, 1px);
+    transform: rotate(45deg) translate(1px, -1px);
     background-color: white;
     border-radius: 100px;
   }
@@ -234,7 +238,7 @@ select {
   font-weight: 700;
   font-size: 32px;
   line-height: 38px;
-  margin-top: 36px;
+  margin-top: 28px;
   text-align: center;
 }
 
@@ -662,6 +666,7 @@ start here */
     transform-origin: left;
     outline: none;
   }
+
 
   .main-nav {
     margin-left: auto;
