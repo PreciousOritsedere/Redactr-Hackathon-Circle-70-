@@ -6,14 +6,15 @@ const redactCount = document.getElementById("redact-count");
 const refresh = document.getElementById("refresh");
 const redactnowBtn = document.getElementById("redactnow-btn");
 const patternError = document.getElementById("pattern-error");
-
+const proceedBtn = document.getElementById("proceedBtn");
+const instrModal = document.getElementById("instrModal");
 // new result array
 let newResult = [];
 
 // Event for refreshing the form inputs
 refresh?.addEventListener("click", refreshFun);
 redactnowBtn?.addEventListener("click", redactWordFunc);
-
+proceedBtn?.addEventListener("click", proceedBtnFunc);
 // redact logic
 function redactWordFunc(e) {
   e.preventDefault();
@@ -148,7 +149,8 @@ function refreshFun(e) {
   localStorage.removeItem("redactResult");
   window.location.reload();
 }
-
-
-
-
+//Precious DAVIES WORKED ON IT
+function proceedBtnFunc(e) {
+  e.preventDefault();
+  instrModal.style.display = "none";
+}
