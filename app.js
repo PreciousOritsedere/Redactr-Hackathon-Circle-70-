@@ -78,37 +78,38 @@ function redactWordFunc(e) {
 
 // Redact word function
 function redactFunc(data, redactedWordsData, patternsData) {
-  if (patternsData === "none") {
-    return;
-  }
+	if (patternsData === "none") {
+		return;
+	}
 
-  let redactResult = redactedWordsData
-    .replace(/,/g, "")
-    .replace(/\./g, "")
-    .toLowerCase();
+	let redactResult = redactedWordsData
+		.replace(/,/g, "")
+		.replace(/\./g, "")
+		.toLowerCase();
 
-  let redactData = redactResult
-    .trim()
-    .split(" ")
-    .filter((item) => item);
+	let redactData = redactResult
+		.trim()
+		.split(" ")
+		.filter((item) => item);
 
-  for (i = 0; i < redactData.length; i++) {
-    if (data == redactData[i]) {
-      data = patternsData;
-    }
-  }
+	for (i = 0; i < redactData.length; i++) {
+		if (data == redactData[i]) {
+			data = patternsData;
+		}
+	}
 
-  newResult.push(data);
-  // - join()  turns the array into a string
-  let newData = newResult.join(" ");
 
-  // store the data in localstorage
-  localStorage.setItem("redactResult", newData);
+	newResult.push(data);
+	// - join()  turns the array into a string
+	let newData = newResult.join(" ");
 
-  // Loading Spinner
-  loaderFunc();
-  // re-route to the next page
-  window.location.assign("resultpage.html");
+	// store the data in localstorage
+	localStorage.setItem("redactResult", newData);
+
+	// Loading Spinner
+	loaderFunc();
+	// re-route to the next page
+	window.location.assign("resultpage.html");
 }
 
 function loaderFunc() {
@@ -154,3 +155,20 @@ function proceedBtnFunc(e) {
   e.preventDefault();
   instrModal.style.display = "none";
 }
+
+
+
+	// message live count
+	function liveCount() {
+		const messagePure = message.value;
+		const splitMessage = messagePure.split(" ").filter((item) => item);
+		wordCount.innerText = splitMessage.length;
+
+    const redactPure = redactedWords.value;
+		const splitRedact = redactPure.split(" ").filter((item) => item);
+		redactCount.innerText = splitRedact.length;
+	}
+
+  //live count event listener
+	message.addEventListener("keyup", liveCount);
+	redactedWords.addEventListener("keyup", liveCount);
